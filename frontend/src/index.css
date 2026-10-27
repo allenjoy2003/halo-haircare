@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --halo-bg: #F4F6F8;
+    --halo-surface: #FFFFFF;
+    --halo-border: #E1E6EB;
+    --halo-navy: #0B1B2B;
+    --halo-muted: #5B6B7A;
+    --halo-accent: #7FD6D0;
+    --halo-teal: #2E9E96;
+    --halo-success: #2E9E6B;
+    --halo-warning: #D9962B;
+    --halo-error: #D14B4B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--halo-bg);
+  }
+
+  body {
+    background-color: var(--halo-bg);
+    color: var(--halo-navy);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Accessible focus ring */
+*:focus-visible {
+  outline: 2px solid var(--halo-teal);
+  outline-offset: 2px;
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F6F8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D8DF;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B6B7A;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
